@@ -14,7 +14,7 @@ function afterSubmit(e){
     e.preventDefault();
 
     if (customerForm.checkValidity() === false) {
-        event.stopPropagation();
+        e.stopPropagation();
         for(let field of customerForm.elements) {
             if(!field.checkValidity()){
                 field.classList.add("is-invalid");
